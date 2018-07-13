@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Diary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    
+</head>
+<body>
+    <header>
+        <h1>My Diary</h1>
+    </header>
+    <img id="diary_image" src="images/diary_logo.png" alt="Diary Logo" />
+    <p id="intro">This is a diary app which helps you to put down thoughts on your mind for future execution.</p>
+    
+    <form id="sign_in_form">
+        <fieldset>
+            <legend>Sign in</legend>
+            <table class="table" width="100%">
+                <tr width="100%">
+                    <td id="label"><label for="email">Email: </label></td>
+                    <td id="field"><input id="sign_in_email" type="email" hint="Enter email here." /></td>
+                </tr>
+                <tr>
+                    <td id="label"><label for="password">Password: </label></td>
+                    <td id="field"><input id="sign_in_password" type="password" hint="Enter password here." required /></td>
+                </tr>
+                <tr>
+                    <td id="button_cell" colspan="2">
+                        <button id="sign_in_button">Sign in</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="#" id="sign_up_display" onclick="signUpOrIn()">Have no account yet? Sign up here.</a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+  
+    <form id="sign_up_form">
+        <fieldset>
+            <legend>Sign up</legend>
+            <table width="100%">
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input id="sign_up_email" type="email"  hint="Enter email here." required /></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password: </label></td>
+                    <td><input id="sign_up_password" type="password" hint="Enter password here." /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="sign_up_button" onclick="signUp()">Sign up</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="#" id="sign_in_display" onclick="signUpOrIn()">Already  have an account? Sign in here.</a>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+  
+    <footer>
+        <p>&copy; 2018.</p>
+    </footer>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
